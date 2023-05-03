@@ -43,8 +43,11 @@ const commands = {
 
 
 
+
+
     
   }
+  
 
   
 
@@ -74,7 +77,7 @@ const GitConsole = () => {
         commands={commands}
         welcomeMessage={welcomeMessage}
 
-        promptLabel={<Icon icon="game-icons:running-ninja" width='30px' color="green" />}
+        promptLabel={<Icon icon="game-icons:running-ninja" width='30px' color="green" className='brightness-200' />}
         promptLabelStyle={{ color: 'green' }}
         errorText={'Error!'}
         style={{
