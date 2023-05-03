@@ -25,8 +25,8 @@ app.use(function(req, res, next) {
 
 //handler for 500 - Server Error
 app.use(function(err, req, res, next) {
-    console.error(err.stack);
-    res.status(500).send('Something broke!' + emoji.get('poop'));
+    res.status(500).render('500');
+    
 });
 
 // ********** NODE EMOJI **********
