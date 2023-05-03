@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Terminal from 'react-console-emulator'
 import {Icon} from '@iconify/react';
+import { TypeAnimation } from 'react-type-animation';
 
 const commands = {
   echo: {
@@ -45,15 +46,34 @@ const commands = {
     
   }
 
+  
+
 
 
 const GitConsole = () => {
 
+  const welcomeMessage = (
+
+      <TypeAnimation
+        cursor={true}
+        sequence={[
+          'Welcome to the Git Console!',
+          1000,
+          'Type "help" to see a list of commands.',
+          1000,
+
+        ]}
+      />
+    )
 
     return (
+
+
+
       <Terminal
         commands={commands}
-        welcomeMessage={'In the art of Git, the commit is your ally, the branch your friend, and the merge your teacher. May your code flow like water, and your merges be conflict-free.'}
+        welcomeMessage={welcomeMessage}
+
         promptLabel={<Icon icon="game-icons:running-ninja" width='30px' color="green" />}
         promptLabelStyle={{ color: 'green' }}
         errorText={'Error!'}
